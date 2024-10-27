@@ -1,6 +1,8 @@
 @api_HostAddress = http://localhost:5015
 
+###
+GET {{api_HostAddress}}/api/stocks
+###
 GET {{api_HostAddress}}/api/stocks/2
 Accept: application/json
 
-###
