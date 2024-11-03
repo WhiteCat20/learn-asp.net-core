@@ -15,7 +15,10 @@ namespace api.Mappers
     Purchase = stockModel.Purchase,
     LastDiv = stockModel.LastDiv,
     Industry = stockModel.Industry,
-    MarketCap = stockModel.MarketCap
+    MarketCap = stockModel.MarketCap,
+    // Comments
+    Comments = stockModel.Comments.Select(c => c.ToCommentDto()).ToList()
+
    };
   }
   // jika ingin create data ke database, kirimkan modelnya, bukan dtonya dari mapper
@@ -29,7 +32,6 @@ namespace api.Mappers
     LastDiv = stockDto.LastDiv,
     Industry = stockDto.Industry,
     MarketCap = stockDto.MarketCap
-
    };
   }
  }

@@ -153,3 +153,7 @@ D:\Documents\Programming\.net learning\FinShark\api\bin\Debug\net8.0\runtimes\wi
 D:\Documents\Programming\.net learning\FinShark\api\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 D:\Documents\Programming\.net learning\FinShark\api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 D:\Documents\Programming\.net learning\FinShark\api\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\Documents\Programming\.net learning\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Documents\Programming\.net learning\FinShark\api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Documents\Programming\.net learning\FinShark\api\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Documents\Programming\.net learning\FinShark\api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
