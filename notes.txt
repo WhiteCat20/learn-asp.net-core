@@ -1,0 +1,21 @@
+Step dalam membuat sebuah sistem di ASP.NET Core web API
+
+0. buat model dulu, isinya apa saja fieldnya, get set, dan validasinya.
+1. buat interface untuk repository.
+2. buat repository, dan implement semua interface yang dibuat.
+3. gunakan dependency injection untuk menerapkan application db context.
+4. dependency injection untuk interface dan repository juga ditambahkan di file Program.cs .
+5. buat controller, dan jangan lupa untuk menambahkan : 
+[Route("api/{nama model}")]
+[ApiController]
+6. lalu buat class controller, dan buat constructor untuk dependency injection, dan diisi dengan interface dan repository yang dibuat.
+7. kemudian buat method-method untuk GET, POST, UPDATE, PUT, DELETE. tapi jangan lupa untuk dibuat dahulu di interface dan repository.
+8. tetapi sebelum itu, buat dulu DTO (Data Transfer Object), 
+9. pertama buat dto dari model itu sendiri, dan ini bisa copy paste dari model yang telah dibuat.
+10. Kemudian buat Mapper
+11. dan terapkan Dto dengan method yang menerapkan get all.
+12. Jika ada perlu menambahkan data dummy di DB, silahkan lakukan pada step ini. dan jika ada perubahan field database jangan lupa lakukan comment berikut : 
+- dotnet ef migrations add init
+- dotnet ef database update
+13. restart server dengan comment : dotnet run watch
+14. Silahkan coba di Swagger UI. 

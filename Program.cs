@@ -21,6 +21,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 
 // untuk memberi scope pada program
 builder.Services.AddScoped<IStockRepository, StockRepository>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>(); // setelah membuat repository dan interface
 
 var app = builder.Build();
 
