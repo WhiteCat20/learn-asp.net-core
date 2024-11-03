@@ -21,12 +21,27 @@ Step dalam membuat sebuah sistem di ASP.NET Core web API
 14. Silahkan coba di Swagger UI. 
 
 Step untuk menerapkan one to many relationship di asp.net web api
-
 contoh kasus : stock & comment, stock punya banyak comment, comment hanya punya satu stock (one to many)
+
 1. tambahkan comment dto di stock dto
 2. kemudian ke mapper stock, dan tambahkan kode untuk menghubungkan dengan Stock Dto : 
 -  Comments = stockModel.Comments.Select(c => c.ToCommentDto()).ToList()
 3. karena disini kita ingin menampilkan comment di get all di stock, maka tambahkan Include di method tersebut
 4. bisa tambahkan juga di get by id.
 5. jika belum download newton, silahkan download newton, dan microsoft newton mvc
+6. tambahkan konfigurasi di Program.cs
 
+Step untuk create dengan one to many relationship
+contoh kasus yang sama dengan diatas : membuat comment perlua adanya StockId
+
+1. Di controller buat method post dengan menempatkan ID didalamnya
+2. Buat Dto khusus untuk create.
+3. kemudian masukan create Dto kedalam method post.
+4. (ikut video) buat StockExists di IStockRepository  dengan boolean untuk mengecek apakah ada Stock nya
+5. jangan lupa implement di bagian StockRepository
+6. kemudian jangan lupa inject IStockRepository ke comment controller di constructornya
+7. lalu taruh validasi StockExists didalam post method.
+8. lalu ke mapper dan buat satu metode statis khusus untuk create (dari video : ToCommentFromCreate) dan dengan menambahkan Dto untuk create di parameternya, serta Id dari parentnya (disini kasusnya adalah id dr stock)
+9. kemudian tambahkan create dto di post method, bisa dengan menyimpannya di dalam sebuah variabel.
+10. lalu buat create di interface dan repository, dan terapkan di method post
+11. silahkan di coba di Swagger UI
