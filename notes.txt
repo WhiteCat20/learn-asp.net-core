@@ -45,3 +45,21 @@ contoh kasus yang sama dengan diatas : membuat comment perlua adanya StockId
 9. kemudian tambahkan create dto di post method, bisa dengan menyimpannya di dalam sebuah variabel.
 10. lalu buat create di interface dan repository, dan terapkan di method post
 11. silahkan di coba di Swagger UI
+
+
+Menambahkan data validation pada ASP .NET CORE API
+1. bisa menambahkan data validation dari query param pada url dengan menambahkan jenis data pada tiap Route, seperti berikut : 
+[HttpGet("{id:int}")]
+[Route("{id:int}")]
+2. kemudian bisa juga menambahkan data validation di CreateDTO, dan UpdateDTO
+3. setelah itu bisa menambahkan kode ini pada awal method di setiap controller, untuk mengaktifkan validasi data : 
+ if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+
+
+
+
+
+
+
